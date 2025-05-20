@@ -12,10 +12,10 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         # Create superuser with EMAIL and PASSWORD only
-        if not User.objects.filter(email='admin@esterMollel.com').exists():
+        if not User.objects.filter(email='super-admin@estherstanley.com').exists():
             User.objects.create_superuser(
-                email='esterMollel@gmail.com',
-                password='esterMollel2001'
+                email='estherstanley2003@gmail.com',
+                password='molly01'
             )
             self.stdout.write(self.style.SUCCESS('Superuser created'))
         
