@@ -31,3 +31,4 @@ class StudentCourseEnrollmentAdmin(admin.ModelAdmin):
     list_filter = ('is_active', 'enrolled_at', 'course__department')
     search_fields = ('student__username', 'student__email', 'course__title')
     autocomplete_fields = ('student', 'course')
+

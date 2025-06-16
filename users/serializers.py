@@ -55,7 +55,6 @@ class ProfilePhotoSerializer(serializers.ModelSerializer):
     
 class MessageSerializer(serializers.Serializer):
     sender = serializers.PrimaryKeyRelatedField(queryset=User.objects.filter(is_staff=True))
-    # No recipient field needed, as all users can see the message
     body = serializers.CharField()
     sent_at = serializers.DateTimeField(read_only=True)
     
